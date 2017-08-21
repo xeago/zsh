@@ -225,7 +225,10 @@ fi
 
 # Load and initialize the completion system ignoring insecure directories.
 autoload -Uz compinit && compinit -i
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+if [[ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] then;
+  source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 
 autoload -U url-quote-magic; zle -N self-insert url-quote-magic
