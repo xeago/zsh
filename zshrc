@@ -174,11 +174,13 @@ fi
 #
 # Apple Terminal session resumption
 #
-source $HOME/.zsh/sessions/sessions.zsh
-shell_session_save_user_state() {
-  whence gcloud >/dev/null && echo 'scloud && echo Loaded gcloud.'
-  [[ -n "$VIRTUAL_ENV" ]] && echo 'source '$VIRTUAL_ENV'/bin/activate && echo Activated virtualenv.'
-}
+if [[ -e "$HOME/.zsh/sessions/sessions.zsh" ]] then;
+  source $HOME/.zsh/sessions/sessions.zsh
+  shell_session_save_user_state() {
+    whence gcloud >/dev/null && echo 'scloud && echo Loaded gcloud.'
+    [[ -n "$VIRTUAL_ENV" ]] && echo 'source '$VIRTUAL_ENV'/bin/activate && echo Activated virtualenv.'
+  }
+fi
 
 #
 # Ruby rbenv
