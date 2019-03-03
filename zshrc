@@ -225,3 +225,8 @@ PERIOD=600
 periodic_date() { date }
 periodic_uptime() { uptime }
 periodic_functions+=(periodic_date periodic_uptime)
+
+#
+# Stop pesky homebrew from updating every single invocation
+#
+HOMEBREW_AUTO_UPDATE_SECS=$((3600*24))
