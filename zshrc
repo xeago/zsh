@@ -216,6 +216,7 @@ autoload -Uz compinit && compinit -i
 if [[ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] then;
   source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+bindkey '^ ' autosuggest-accept
 
 
 autoload -U url-quote-magic; zle -N self-insert url-quote-magic
