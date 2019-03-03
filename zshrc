@@ -4,6 +4,7 @@
 
 # keybindings
 bindkey -e
+bindkey "^[[3~" delete-char
 
 # Jobs
 setopt LONG_LIST_JOBS     # List jobs in the long format by default.
