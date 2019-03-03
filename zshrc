@@ -184,20 +184,6 @@ if [[ -e "$HOME/.zsh/sessions/sessions.zsh" ]] then;
 fi
 
 #
-# Ruby rbenv
-#
-if (( $+commands[rbenv] )) then;
-  eval "$(rbenv init - --no-rehash zsh)"
-fi
-
-#
-# Use z to jump around
-#
-if [[ -e "$HOME/.zsh/z/z.sh" ]] then;
-  source $HOME/.zsh/z/z.sh
-fi
-
-#
 # Source spotify functions
 #
 if [[ -e "$HOME/.zsh/spotify/spotify.zsh" ]] then;
