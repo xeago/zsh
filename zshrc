@@ -220,3 +220,8 @@ bindkey '^ ' autosuggest-accept
 
 
 autoload -U url-quote-magic; zle -N self-insert url-quote-magic
+
+PERIOD=600
+periodic_date() { date }
+periodic_uptime() { uptime }
+periodic_functions+=(periodic_date periodic_uptime)
