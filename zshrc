@@ -171,6 +171,14 @@ if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
   add-zsh-hook chpwd update_terminal_cwd
   update_terminal_cwd
 fi
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  update_terminal_title() {
+    print -Pf '\e]0;%s%s %s\a' ${(%):-%c} '%(!.#.$) ${1[(w)1]} '
+  }
+  autoload add-zsh-hook
+  add-zsh-hook preexec update_terminal_title
+  add-zsh-hook precmd update_terminal_title
+fi
 
 #
 # Apple Terminal session resumption
