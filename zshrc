@@ -163,7 +163,7 @@ setopt pushdminus
 #
 # Terminal title
 #
-if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]]; then
+if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
   update_terminal_cwd() {
     printf '\e]7;%s\a' "file://$HOSTNAME${PWD/@ @%20}"
   }
