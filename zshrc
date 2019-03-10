@@ -152,7 +152,7 @@ bindkey -M isearch . self-insert
 #
 autoload -Uz promptinit
 promptinit
-prompt xeago
+type prompt_xeago_setup >/dev/null && prompt xeago
 setopt autocd
 
 #setopt auto_name_dirs
