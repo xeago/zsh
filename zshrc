@@ -203,6 +203,14 @@ if [[ -e "$HOME/.zsh/google/google.zsh" ]] then;
   source $HOME/.zsh/google/google.zsh
 fi
 
+
+#
+# Source restic helpers
+#
+if [[ -e "$HOME/.zsh/restic/restic.zsh" ]] then;
+  source $HOME/.zsh/restic/restic.zsh
+fi
+
 #
 # Syntax highlighting
 #
