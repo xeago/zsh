@@ -220,6 +220,13 @@ if [[ -e "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] the
 fi
 
 #
+# URI pasting
+#
+autoload -Uz bracketed-paste-url-magic
+zle -N bracketed-paste bracketed-paste-url-magic
+
+#
+#
 # Completion
 #
 # Finally initialize the completions
