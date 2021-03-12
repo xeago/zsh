@@ -226,6 +226,12 @@ autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
 #
+# Misc funcs
+#
+autoload c
+setopt PROMPT_SP
+setopt NOCLOBBER
+
 #
 # Completion
 #
