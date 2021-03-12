@@ -161,6 +161,11 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
+# Prevent terminal flow control from stopping text
+stty -ixon -ixoff ixany
+# https://superuser.com/questions/385175/how-to-reclaim-s-in-zsh
+stty stop undef
+
 #
 # Terminal title
 #
