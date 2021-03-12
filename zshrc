@@ -49,6 +49,7 @@ zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 
 # Fuzzy match mistyped completions.
 zstyle ':completion:*' completer _complete _match _approximate
