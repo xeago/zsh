@@ -187,11 +187,13 @@ if [[ "$TERM" == "xterm-kitty" ]]; then
 fi
 
 #
-#
-# Source spotify functions
+# Source company specific functions
 #
 if [[ -e "$HOME/.zsh/spotify/spotify.zsh" ]] then;
   source $HOME/.zsh/spotify/spotify.zsh
+fi
+if [[ -e "$HOME/.zsh/pager/pager.zsh" ]] then;
+  source $HOME/.zsh/pager/pager.zsh
 fi
 
 #
